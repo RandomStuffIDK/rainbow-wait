@@ -1,1 +1,123 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rainbow Wait</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css"></head><body><div class="app"><h1>🌈 Rainbow Wait</h1><div class="controls"><select id="theme"><option>Rainbow</option><option>Rocket</option><option>Hourglass</option></select><input id="minutes" type="number" value="5" min="1"><button onclick="startTimer()">Start</button><button onclick="pauseTimer()">Pause</button><button onclick="resetTimer()">Reset</button></div><div class="circle"><div id="progress"></div><div id="time">05:00</div></div><script src="app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rainbow Wait</title>
+
+style.css
+<link rel="manifesta name="theme-color" content="#5b7fff">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🌈 Rainbow Wait</h1>
+
+    <div class="controls">
+
+        <div class="row">
+
+            <button onclick="setPreset(2)">2 min</button>
+            <button onclick="setPreset(5)">5 min</button>
+            <button onclick="setPreset(10)">10 min</button>
+            <button onclick="setPreset(15)">15 min</button>
+            <button onclick="setPreset(30)">30 min</button>
+
+        </div>
+
+        <div class="row">
+
+            <input
+                id="minutesInput"
+                type="number"
+                value="5"
+                min="1">
+
+            <button onclick="startTimer()">
+                Start
+            </button>
+
+            <button onclick="pauseTimer()">
+                Pause
+            </button>
+
+            <button onclick="resetTimer()">
+                Reset
+            </button>
+
+        </div>
+
+        <div class="row">
+
+            <button onclick="addTime(1)">
+                +1 min
+            </button>
+
+            <button onclick="addTime(5)">
+                +5 min
+            </button>
+
+            <button onclick="toggleTVMode()">
+                TV Mode
+            </button>
+
+        </div>
+
+        <div class="row">
+
+            <select
+                id="themeSelect"
+                onchange="changeTheme()">
+
+                <option value="rainbow">
+                    Rainbow
+                </option>
+
+                <option value="rocket">
+                    Rocket
+                </option>
+
+                <option value="hourglass">
+                    Hourglass
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+    <div class="visual-wrapper">
+
+        <div class="progress-ring">
+
+            <div class="inner-circle">
+
+                <div id="timeDisplay">
+                    05:00
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="themeDisplay" class="theme-display">
+            🌈
+        </div>
+
+        <div id="celebration" class="hidden">
+
+            🎉
+
+        </div>
+
+    </div>
+
+</div>
+
+<script
+</body>
+</html>
