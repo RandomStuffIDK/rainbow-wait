@@ -1,1 +1,158 @@
-body{font-family:Arial,sans-serif;background:linear-gradient(#87ceeb,#fff);text-align:center;margin:0}.app{padding:20px}.controls{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.circle{width:320px;height:320px;margin:30px auto;border-radius:50%;background:conic-gradient(red 0deg,orange 60deg,yellow 120deg,green 180deg,blue 240deg,purple 300deg,#ddd 300deg);position:relative}.circle::before{content:"";position:absolute;inset:25px;background:white;border-radius:50%}#progress,#time{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}#time{font-size:48px;font-weight:bold;z-index:2}
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(
+        180deg,
+        #8fd9ff,
+        #ffffff
+    );
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+    padding:20px;
+}
+
+h1{
+    font-size:3rem;
+}
+
+.row{
+    margin:10px 0;
+}
+
+button{
+    padding:12px 18px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    margin:5px;
+    font-size:16px;
+}
+
+input,
+select{
+    padding:10px;
+    font-size:16px;
+    border-radius:12px;
+}
+
+.visual-wrapper{
+    margin-top:20px;
+}
+
+.progress-ring{
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:#e0e0e0;
+
+    margin:auto;
+
+    position:relative;
+
+    transition:0.5s;
+}
+
+.inner-circle{
+
+    position:absolute;
+    inset:30px;
+
+    background:white;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#timeDisplay{
+
+    font-size:72px;
+    font-weight:bold;
+}
+
+.theme-display{
+
+    margin-top:25px;
+    font-size:140px;
+}
+
+.rainbow-theme{
+    filter:drop-shadow(0 0 25px #4dbfff);
+}
+
+.rocket-theme{
+    filter:drop-shadow(0 0 25px #7a5cff);
+}
+
+.hourglass-theme{
+    filter:drop-shadow(0 0 25px #ffb23e);
+}
+
+#celebration{
+    font-size:180px;
+    animation:bounce 1s infinite;
+}
+
+.hidden{
+    display:none;
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+}
+
+.tv-mode h1{
+    display:none;
+}
+
+.tv-mode .controls{
+    display:none;
+}
+
+.tv-mode .progress-ring{
+
+    width:80vh;
+    height:80vh;
+}
+
+.tv-mode #timeDisplay{
+
+    font-size:120px;
+}
+
+.tv-mode .theme-display{
+
+    font-size:220px;
+}
+
+@media(max-width:768px){
+
+    .progress-ring{
+
+        width:300px;
+        height:300px;
+    }
+
+    #timeDisplay{
+
+        font-size:48px;
+    }
+
+}
